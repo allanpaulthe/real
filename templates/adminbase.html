@@ -68,27 +68,13 @@
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li class="active">
-								<a href="/">Home</a>
-							</li>
-							{% if session_user_name %}
-							<li>
-								<a href="#" class="fh5co-sub-ddown">Get Involved</a>
-								<ul class="fh5co-sub-menu">
-									
-									<li><a href="/ask">ask doctor</a></li>
-									<li><a href="/doctorsearch">search doctor</a></li>
-									<li><a href="/reply">view replies</a></li>
-									
-								</ul>
+								<a href="/user">Home</a>
 							</li>
 							
-							<li><a href="/userdonate">donate now</a></li>
-							{%endif%}
 							
-							<li><a href="/contact">Contact</a></li>
-							{% if session_user_name %}
+							
 							   <li><a href="/logout">Logout</a></li>                     
-							{% endif %}
+							
 						</ul>
 					</nav>
 				</div>

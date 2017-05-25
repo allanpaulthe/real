@@ -1,0 +1,127 @@
+{% extends "adminbase.html" %}
+
+{% block content %}
+<style type="text/css">
+	.aa{
+		padding-top: 20px;
+	}
+</style>
+<body style="background-color: #847587;opacity: .8;">
+		<div class="container" style="padding-top: 50px;padding-bottom: 50px;padding-left: 200px;">
+		<div class="col-md-6 0ffset-md-3 col-xs-12">
+			<form   name='form1' onsubmit="required()" enctype="multipart/form-data">
+			 <fieldset class="form-group">
+
+			    <input type="text" placeholder="NAME" name="name" class="form-control" required>
+				</fieldset>
+				<br>
+				 <fieldset class="form-group">
+				 <input type="text" placeholder="HOSPITAL" name="hospital" class="form-control" required>
+				 </fieldset>
+
+				<br>
+				
+			<fieldset class="form-group">
+				<input type="text" placeholder="LOCALITY" name="locality" class="form-control" required>
+				</fieldset>
+				<br>
+
+				<select name='speciality' class="btn btn-primary btn-sm" required>
+							<option disabled selected style="display: none;">SPECIALITY</option>
+						      <option value='neuro'>NEUROLOGIST</option>
+						      <option value='ortho'>ORTHOLOGIST</option>
+						      <option value='pedia'>PEDIATRIST</option> 
+						      <option value='gyno'>GYNOCOLOGIST</option>
+						      <option value='onco'>ONCOLOGIST</option>
+        
+						    </select>
+				<br>
+				<div class="aa"></div>
+			 <fieldset class="form-group">
+				<input type="text" placeholder="USERNAME" name="username" class="form-control" required>
+				</fieldset>
+			        
+				
+                            <fieldset class="form-group">
+				<input type="password" placeholder="PASSWORD" pattern=".{5,10}" required title="5 to 10 characters"  name="password" class="form-control" required>
+				</fieldset>
+
+				 <fieldset class="form-group">
+				<input type="email" placeholder="EMAIL" name="email" class="form-control" required>
+				</fieldset>
+
+				 <fieldset class="form-group">
+				<input type="tel" placeholder="PHONE NO." pattern="[789][0-9]{9}" required title="enter a valid phone no" name="phone" class="form-control" required>
+				</fieldset>
+
+
+
+				<fieldset class="form-group">
+				<p>UPLOAD DOCTOR IMAGE</p>
+				<input type="file" placeholder="DOCTOR IMAGE" name="filename" required> 
+				</fieldset>
+		
+                            <span><button type="submit" class="btn btn-primary btn-lg" >ADD</button></span>
+                 </form>
+				</div>
+				</div>
+	
+</body>
+<script type="text/javascript">
+function required()
+{
+		
+	var username=document.forms["form1"]["username"].value;
+	var email=document.forms["form1"]["email"].value;	
+	var phone=document.forms["form1"]["phone"].value;
+	var y=0;
+	var q=0;
+	var s=0;
+
+	
+		{% for x in var %}
+				if(username=="{{x['username']}}")
+				{
+					y=1;	
+				}
+				if(email=="{{x['email']}}")
+				{
+					q=1;	
+				}
+				if(phone=="{{x['phno']}}")
+				{
+					s=1;	
+				}
+		{% endfor %}
+
+
+		if(y==1)
+		{
+			alert("username already exists")
+			document.form1.action="";
+			
+		}
+		else if(q==1)
+		{
+			alert("email is already registered")
+			document.form1.action="";
+			
+		}
+		else if(s==1)
+		{
+			alert("phoneno is already registered")
+			document.form1.action="";
+			
+		}	
+		else
+		{
+			document.form1.action="http://localhost:5000/adddoctor";
+			document.form1.method="post";
+			
+		}
+	
+
+}
+
+</script>
+{% endblock%}

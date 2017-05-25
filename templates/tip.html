@@ -1,0 +1,41 @@
+{% extends "expertbase.html" %}
+
+{% block content %}
+
+<body>
+			<section class="block-parallax-1">
+			    <div class="parallax-bg"></div>
+			    <div class="md-box">
+			    
+			    			<div class="fh5co-cover text-center" data-stellar-background-ratio="1.0" style="background-image: url(static/images/yoga.jpg);">
+				<div class="col-md-6 col-md-offset-3">
+					
+				    				<br>
+				    				<br>
+				    				<br>
+				    				<br>
+				    				<br>
+										<form action="/addtip" method="POST">	
+											<fieldset class="form-group">
+												<textarea type="text" placeholder="CONTENT:" 												name="content" class="form-control" cols="30" rows="7" required ></textarea>
+											</fieldset>
+										
+											
+											<input type="submit"  class="btn btn-primary btn lg" value="post">
+
+										</form>
+
+											
+								</form>
+					
+			</div>
+
+			      
+			</div>   
+			    
+		</section>
+
+</body
+
+
+{% endblock%}

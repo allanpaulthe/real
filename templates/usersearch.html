@@ -1,0 +1,40 @@
+{% extends "adminbase.html" %}
+
+{% block content %}
+
+		<div class="fh5co-hero">
+			
+			  <div class="fh5co-cover text-center" data-stellar-background-ratio="1.0" style="background-image: url(static/images/hospnew.jpg);">
+				<div class="desc animate-box">
+						<div class="container" style="padding-top: 10px;">
+								<div class="row">
+									<div class="col-md-6 offset-md-3 col-xs-12">
+										<form action="/removeuser" method="POST">
+											<fieldset class="form-group">
+												<input type="text" placeholder="NAME" name="name" class="form-control" required>
+											</fieldset>
+											
+											<span><button type="submit" method="POST" class="btn btn-primary btn-lg" >SEARCH</button></span>
+											
+										</form>
+											
+							</div>
+						</div>
+				</div>
+			</div>
+
+		</div>
+		</div>
+
+
+		<!-- fh5co-content-section -->
+
+		
+	</body>
+		
+
+
+</html>
+
+{% endblock%}
+ 

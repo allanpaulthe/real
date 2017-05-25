@@ -1,0 +1,176 @@
+{% extends "hospitalbase.html" %}
+
+{% block content %}
+		<section class="block-parallax-4">
+			    <div class="parallax-bg"></div>
+			    <div class="md-box">
+
+
+
+
+											<div id="fh5co-content-section" class="fh5co-section-gray">
+												<div class="container">
+													<div class="row">
+														<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+															<h3 style="color: white;font-size: 50px;">Waitlist for organs</h3>
+															
+														</div>
+													</div>
+												</div>
+												
+													<div class="container">
+													<div class="row">
+														<div class="col-md-4 col-md-offset-2">
+															<div class="fh5co-testimonial text-center animate-box">
+																<figure>
+																	<img src="static/images/index.jpeg">
+																</figure>
+																<br>
+																
+																<a href="javascript:void(0)" onclick="toggle_visibility('popupBoxHTML');" style="font-size: 30px;">Unique id search</a>
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="fh5co-testimonial text-center animate-box">
+																<figure>
+																	<img src="static/images/hospital.jpeg">
+																</figure>
+																<br>
+																<a href="javascript:void(0)" onclick="toggle_visibility('popupBoxHTML1');" style="font-size: 30px;"	>Advanced search</a>
+															</div>
+														</div>
+														
+													</div>
+												</div>
+											
+											
+												 <div id="popupBoxHTML">
+										                <div class="popupBoxWrapper">
+										                    <div class="popupBoxContent">
+										                        
+										                        <form id="Form1" method="post" action="/table" class="required">
+
+										                       
+																			
+																			<tr><td style="color: white;font-size: 10px;"><a style="font-size: 30px;">Enter unique id:</a></td><td><input type="number" name="id" style="text-align: center;" required></td></tr>
+																			
+																
+																	<input style="text-align: center;" type="submit" value="Search" class="btn btn-primary btn-sm">
+
+										                        </form>
+										                    </div>
+										                 </div>
+										        </div>
+
+
+
+
+
+										        <div id="popupBoxHTML1">
+										                <div class="popupBoxWrapper">
+										                    <div class="popupBoxContent">
+										                        <a style="color: white;text-align: center;font-size: 25px;">search by blood</a>
+										                        <form id="Form1" method="post" action="/searchbyblood" class="required">
+
+										                        <table>
+																			
+																			
+																			<tr><td>
+								 													
+																					 <select name='blood' class="btn btn-primary btn-sm" required>
+																					<option disabled selected style="display: none;"> <a>Blood group</a></option>
+																				      <option value='A +'>A positive</option>
+																				      <option value='A -'>A negative</option>
+																				      <option value='O +'>O positive</option> 
+																				      <option value='O -'>O negative</option>
+																				      <option value='B +'>B positive</option>
+																				      <option value='B -'>B negative</option>
+																				      <option value='AB +'>AB positive</option> 
+																				      <option value='AB -'>AB negative</option>        
+																				    </select>
+																				    </td>
+																				    <td>
+																				    <div style="padding-left: 40px">
+																			<input class="btn btn-primary btn-sm" type="submit" value="search" name="submit">
+																			</div>
+																			</td>
+																					  
+
+																			</tr>
+																			
+																			
+																			
+																			
+																</table>
+
+										                        </form>
+										                    </div>
+										                    <br>
+
+
+										                    <div class="popupBoxContent">
+										                        <a style="color: white;text-align: center;font-size: 25px;">search by organ</a>
+										                        <form id="Form1" method="post" action="/searchbyorgan" class="required">
+
+										                        <table>
+																			
+																			
+																			<tr><td>
+								 													
+																					 <select name='organ' class="btn btn-primary btn-sm" required>
+																					<option disabled selected style="display: none;"> organ</option>
+																				      <option value='liver'>liver</option>
+																				      <option value='kidney'>kidney</option>
+																				      <option value='pancreas'>panceras</option> 
+																				      <option value='heart'>heart</option>
+																				      
+																				    </select>
+																				    </td>
+																				    <td>
+																				    <div style="padding-left: 40px">
+																			<input class="btn btn-primary btn-sm" type="submit" value="search" name="submit1">
+																			</div>
+																			</td>
+																					  
+
+																			</tr>
+																			
+																			
+																			
+																			
+																</table>
+
+										                        </form>
+										                    </div>
+										        </div>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+											</div>
+
+			</div>
+		</section>
+		<script type="text/javascript">
+		function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+
+            }
+    </script>
+
+{% endblock%}

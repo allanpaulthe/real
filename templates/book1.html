@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+
+<style type="text/css">
+	.xx{
+		padding-left: 200px;
+		height: relative;
+		width: relative;
+		background: 
+    /* top, transparent red */
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    );
+
+	}
+
+</style>
+
+{% block content %}
+		<section class="block-parallax-4">
+			    <div class="parallax-bg"></div>
+			    <div class="md-box">
+			     <div class="xx container " style="background: linear-gradient(
+      rgba(22, 22, 22, 0.45), 
+      rgba(22, 22, 22, 0.45)
+    ),url(http://www.technocrazed.com/wp-content/uploads/2015/12/Wood-Wallpaper-Background-9.jpg);
+">
+<br>
+<br>
+	
+	{%if error%}
+		<p style="color: red;font-size: 35px;">{{error}}</p>
+
+	
+	{%else%}
+
+				<h3 style="color: white;padding-top: 10px;font-size: 40px;">Our doctors</h3>
+	<br>
+	<br>
+
+											<div id="fh5co-content-section" class="fh5co-section-gray">
+												
+												
+													<div class="container">
+													<div class="row">
+													{%if var%}
+													{% for x in rows %}
+														<div class="col-md-4">
+															<div class="fh5co-testimonial text-center animate-box">
+																<figure>
+																	<img src="static/img/{{x['pic']}}" alt="user" >
+																</figure>
+																<blockquote>
+																	<p>Name:{{x['name']}} <br>
+																	location:{{x['locality']}}<br>
+																	category:{{x['category'] }}<br>
+																	hospital:{{x['hospital']}}
+																	<form action="/booked/{{x['userid']}} " method="POST" >
+																	
+																		date : <input   type="date" name="date" min={{now}} required ><br>
+																	
+																		time : <input type="time" min="09:00:00" max="18:00:00"	 name="time" required >
+																		<input type="submit" class="btn btn-primary btn-sm" name="book" value="book">
+																	</form> 
+																	</p>
+																</blockquote>
+																
+															</div>
+														</div>
+													{% endfor %}
+									{%endif%}
+									{%if not var%}
+
+									<p style="font-size: 50px;text-align: center;color: white;padding-left: 450px;">No Results</p>
+
+									{%endif%}
+														
+											</div>
+											{%endif%}
+													
+								</div>
+								</div>
+							</div>
+						</section>
+
+						 			
+{% endblock%}

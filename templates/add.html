@@ -1,0 +1,42 @@
+{% extends "hospitalbase.html" %}
+
+{% block content %}
+<body>
+	<section class="block-parallax-3">
+			<div class="parallax-bg"></div>
+				<div class="md-box">
+					<div id="fh5co-features">
+						<div class="container">
+							<div class="row">
+
+
+
+								<div class="col-md-4">
+									<div class="feature-left">
+										<span class="icon">
+											<i class="glyphicon glyphicon-tag"></i>
+										</span>
+										<div class="feature-copy">
+											<span style="color: white;font-size: 30px">Search</span>
+											<p>search by name .</p>
+											<form id="location" method="post" action="/addorremove">
+												<input type="text" name="name"><br>
+												<input   class="btn btn-primary btn-lg" type="submit" value="search" name="submit" >
+											</form>
+
+
+										                    
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	</section>
+
+</body>
+
+
+
+{% endblock%}

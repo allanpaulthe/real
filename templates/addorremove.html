@@ -1,0 +1,66 @@
+{% extends "hospitalbase.html" %}
+
+{% block content %}
+<body>
+	<section class="block-parallax-3">
+			<div class="parallax-bg"></div>
+				<div class="md-box">
+					
+
+
+				<div class="container">
+				{%if var%}
+
+					<h3 style="color: white;font-size: 20px;text-align: center;">RESULTS</h3>
+					    <table class="table table-inverse">
+					<thead>
+					<tr>
+					<th>#</th>
+					<th>NAME</th>
+					<th>request id</th>
+					<th>organ</th>
+					</tr>
+					</thead>
+					<tbody>
+					{%for x in var%}
+					<tr>
+					<td>1</td>
+					<td>{{x['name']}}</td>
+					<td>{{x['requestno']}} </td>
+					<td>{{x['organ']}} </td>
+					<td>
+
+
+					<a class="btn btn-primary btn-sm" href="/removerequest/{{x['requestno']}} ">remove</a>
+
+
+
+					</td>
+					<td>
+
+
+
+
+					<a class="btn btn-primary btn-sm" href="/renewrequest/{{x['requestno']}} ">renew</a>
+
+
+					</td>
+
+					</tr>
+					{%endfor%}
+					</tbody>
+					</table>
+				{%endif%}
+				{%if not var%}
+					<p style="font-size: 40px;color: white;">no matching requests</p>
+
+				{%endif%}
+				</div>
+
+
+
+
+
+</div>
+</section>
+{% endblock%}

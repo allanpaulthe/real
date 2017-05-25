@@ -1,0 +1,45 @@
+{% extends "adminbase.html" %}
+
+{% block content %}
+<body>
+
+		<div class="fh5co-cover text-center" data-stellar-background-ratio="1.0" style="background-image: url(static/images/image4.jpg);">
+			{%if var%}
+				<p style="text-align: center;color: green;font-size: 40px;"><strong> successfully added new {{var}} </strong> </p>
+			{%endif%}
+		<div class="container" style="padding-bottom: 50px;">
+			<p align="centre" style="padding-top: 50px" >		
+
+			<a class="btn btn-primary btn-lg" href="/admin">ADD ADMIN</a>
+			</p>
+			<br>
+			<p align="centre">
+			<a class="btn btn-primary btn-lg" href="/doctor">ADD DOCTOR</a>
+			</p>
+			<br>
+			<p align="centre">
+			<a class="btn btn-primary btn-lg" href="/expert1">ADD EXPERT</a>
+			</p>
+			<br>
+			<p align="centre">		
+			<a class="btn btn-primary btn-lg" href="/hospital">ADD HOSPITAL</a>
+			</p>
+			<br>
+			<a class="btn btn-primary btn-lg" href="/adminsearchuser">SEARCH USER</a>
+			</p>
+			<br>
+			<p align="centre">		
+			<a class="btn btn-primary btn-lg" href="/transaction">VIEW PREVIOUS ORGAN TRANSACTION</a>
+			</p>
+		</div>
+				
+	
+</div>
+
+
+
+		
+	
+</body>
+{% endblock%}
+

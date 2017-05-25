@@ -1,0 +1,112 @@
+{% extends "hospitalbase.html" %}
+
+<style type="text/css">
+	.xx{
+		padding-left: 200px;
+		height: relative;
+		width: relative;
+		background: 
+    /* top, transparent red */
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    );
+
+	}
+
+</style>
+
+{% block content %}
+
+<body>
+			<section class="block-parallax-1">
+			    <div class="parallax-bg"></div>
+			    <div class="md-box">
+			    <p style="text-align: center;font-size: 50px;color: white;">Enter the details</p>
+			    <div class="xx container " style="background: linear-gradient(
+      rgba(22, 22, 22, 0.45), 
+      rgba(22, 22, 22, 0.45)
+    ),url(https://images.freecreatives.com/wp-content/uploads/2015/04/1073233-black-wood-panels.jpg);
+">
+<br>
+<br>
+			    <form id="Form" method="post" action="/regtransaction" class="required" style="padding-left: 300px;padding-bottom: 40px;">
+					<table>
+						<tr><td colspan=3><b>Register Transaction Now</b></td></tr>
+						<tr><td>From hospital:</td><td><input type="text" size="12" maxlength="32" name="first_name" required></td></tr>
+						<tr><td>To hospital:</td><td><input type="text" size="12" maxlength="32" name="last_name" required></td></tr>
+						<tr><td>Patient name:</td><td><input type="text" size="12" maxlength="32" name="patient_name" required></td></tr>
+						<tr>
+								 <td colspan="1">SEX:</td>
+								 <td> <input type="radio" name="gender" value="male"> Male</td>
+								 <td> <input type="radio" name="gender" value="female"> Female</td>
+						</tr>
+						<tr><td colspan=3><b>Adress</b></td></tr>
+					  	<tr><td>house no/name:</td><td><input type="text" size="36" name="house" required></td></tr>
+						<tr><td>city:</td><td><input type="text" size="36" name="city" required></td></tr>
+						<tr><td>pin code:</td><td><input type="text" size="6" maxlength="16" name="pincode" required class="phone"></td></tr>
+						<tr><td>donor name:</td><td><input type="text" size="12" maxlength="32" name="donor_name" required></td></tr>
+						<tr>
+								 <td colspan="1">SEX:</td>
+								 <td> <input type="radio" name="gender1" value="male"> Male</td>
+								 <td> <input type="radio" name="gender1" value="female"> Female</td>
+						</tr>
+						<tr><td colspan=3><b>Adress</b></td></tr>
+					  	<tr><td>house no/name:</td><td><input type="text" size="36" name="house1" required></td></tr>
+						<tr><td>city:</td><td><input type="text" size="36" name="city1" required></td></tr>
+						<tr><td>pin code:</td><td><input type="text" size="6" maxlength="16" name="pincode1" required></td></tr>
+						
+						<tr><td>date:</td><td><input type="date" required name="dob" ></td></tr>
+						<tr><td>blood group:</td>
+						 <td>
+							<select name='blood' class="btn btn-primary btn-sm" required>
+							<option disabled selected style="display: none;"> Blood group</option>
+						      <option value='A +'>A positive</option>
+						      <option value='A -'>A negative</option>
+						      <option value='O +'>O positive</option> 
+						      <option value='O -'>O negative</option>
+						      <option value='B +'>B positive</option>
+						      <option value='B -'>B negative</option>
+						      <option value='AB +'>AB positive</option> 
+						      <option value='AB -'>AB negative</option>        
+						    </select>
+						 </td>
+						</tr>
+						
+						
+						
+						<tr><td colspan=3>Donated Organ</td></tr>
+						<tr>
+							
+							
+								 <td> <input type="radio" name="organ" value="liver"> liver</td>
+						</tr>
+						<tr>
+								 
+								 <td> <input type="radio" name="organ" value="heart"> heart</td>
+								 <td> <input type="radio" name="organ" value="kidnay"> kidney</td>
+						</tr>
+						<tr>
+								 
+								 <td> <input type="radio" name="organ" value="lungs"> Lungs</td>
+								 <td> <input type="radio" name="organ" value="pancreas"> Pancreas</td>
+						</tr>
+					</table>
+					
+					
+  				<table  class="col-mg-2 offset-3" style="padding-top: 30px;padding-bottom: 30px;">	
+  				<tr>
+  				<td>
+				<span><input type="submit" value="submit" class="btn btn-primary btn-sm" style="text-align: center;"></span>
+				</td>
+				</tr>
+				</table>
+				</form>
+
+			     </div>
+			    </div>
+			</section>
+</body>
+
+
+{% endblock%}

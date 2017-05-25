@@ -1,0 +1,126 @@
+{% extends "hospitalbase.html" %}
+
+{% block content %}
+<body>
+
+			<section class="block-parallax-1">
+			    <div class="parallax-bg"></div>
+			    <div class="md-box">
+			    {%if rows %}
+			    						
+                                                                    <form action="" method="POST">
+										                        		<table  class="table table-inverse">
+																		  <thead>
+																		    <tr>
+																		      <th>#</th>
+																		      
+																		      <th>NAME</th>
+
+																		      <th>RELATIVE PH.NO</th>
+																		      <th>HOUSE</th>
+																		      <th>IMAGE</th>
+																		      <th>ACTION</th>
+
+																		      																		   
+																		    </tr>
+																		  </thead>
+																		  {% for x in rows %}
+																		  <tbody>
+																		    <tr >
+																		      <th scope="row">1</th>
+																		      <td align="left">{{ x['fname'] }}</td>
+																		      <td align="left">{{x['ephno2'] }}</td><td align="left">{{x['house'] }}</td>
+																		      <td align="left"><img style="height: 80px;width: 80px;" src="static/img/{{x['donorpic'] }}"></td>
+																		      <td align="left"><a class="btn btn-primary"  href="javascript:void(0)" onclick="toggle_visibility('popupBoxHTML{{x['userid'] }}');">VERIFIED</a></td>
+
+																		      
+
+																		      
+																		    </tr>
+																		    </tbody>
+																		    {% endfor %}
+																		    </table>
+																		    </form>
+
+																		    <div>
+											{%for x in rows%}							    	</form>
+											<div id="popupBoxHTML{{x['userid'] }}" style="margin:10px 0 0 0;
+ top: 10%; 
+ left: 0; 
+ position: fixed; 
+ width: 100%; 
+ height: 100%;
+ background:transparent; 
+ display: none; 
+ opacity:.95; 
+ z-index:100;
+ widows:50%;">
+										                <div class="popupBoxWrapper">
+										                    <div class="popupBoxContent">
+										                       
+										                        
+
+									                                          
+			    <div class="card" style="width: 50rem;">
+  <img class="card-img-top" src="static/images/heart.jpg" alt="Card image cap">
+  <div class="card-block">
+  <form action="/removedonor/{{x['userid'] }}" method="POST">
+    <h4 class="card-title">TRANSPLANTABLE ORGANS</h4>
+    
+   
+  <ul>
+    
+      
+    <td> <input type="radio" name="heart" value="yes"> heart</td>
+    <td> <input type="radio" name="kidney" value="yes" >kidney</td>
+    <td> <input type="radio" name="liver" value="yes" >liver</td>
+    <td> <input type="radio" name="pancreas" value="yes" >pancreas</td>
+    <td> <input type="radio" name="lungs" value="yes" >lungs</td>
+  </ul>
+  <button type="submit" class="btn btn-primary">ADD</button>
+  </form>
+  <div class="card-block">
+    <a onclick="toggle_visibility('popupBoxHTML{{x['userid'] }}');"  class="card-link">BACK</a>
+
+   
+  </div>
+</div>
+			    </div>
+													                      
+													                       
+										                        
+																		    </div>
+								{%endfor%}
+																		    
+																		    
+										                        		
+										                        		
+										                        		</div>
+										                       {%endif%}
+
+										                     {%if not rows%}
+										                     	<div class="bok" style="height: relative;width: relative;background-color: black;padding-left: 150px;padding-right: 150px;">
+										                     		<p style="text-align: center;color: white;font-size: 40px;">No matching Donors</p>
+										                     	</div>
+
+										                     {%endif%}
+										                </div>
+										           </section>
+										                        		
+
+</body>
+
+			<script type="text/javascript">
+		function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+
+            }
+    </script>
+
+
+
+{% endblock%}

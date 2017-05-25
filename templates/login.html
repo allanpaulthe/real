@@ -1,0 +1,85 @@
+{% extends "hospitalbase.html" %}
+
+{% block content %}
+<style type="text/css">
+	.aa{
+		padding-top: 150px;
+	}
+</style>
+
+		<div class="fh5co-hero">
+			
+			  <div class="fh5co-cover text-center" data-stellar-background-ratio="1.0" style="background-image: url(static/images/Hospitalback2.jpg);">
+				<div class="aa">
+						<div class="container" style="padding-top: 10px;">
+								<div class="row">
+									<div class="col-md-6 offset-md-3 col-xs-12">
+										<form action="/registerpatient" method="POST" enctype="multipart/form-data" >
+											<fieldset class="form-group">
+												<input type="text" placeholder="NAME" name="name" class="form-control" required>
+											</fieldset>
+											<fieldset class="form-group">
+												<input type="text" placeholder="HOUSE NAME" name="ADDRESS" class="form-control" required>
+											</fieldset>
+											<fieldset class="form-group">
+												<input type="text" placeholder="CITY" name="CITY" class="form-control" required>
+											</fieldset>
+											<fieldset class="form-group">
+												<input type="text" placeholder="PIN" name="PIN" class="form-control" required>
+											</fieldset>
+											<fieldset class="form-group">
+												<input type="text" placeholder="EMAIL" name="EMAIL" class="form-control" required>
+											</fieldset>
+											<fieldset class="form-group">
+												<input type="file" name="filename"  placeholder="Image path" title="Enter the complete path of image" required>
+											</fieldset>
+											
+											
+                                            <div>
+                                            	 <select name="blood" class="btn btn-primary" required>
+                                          <option value="" disabled selected style="display: none;">BLOOD GROUP</option>
+												  <option value="A +">A+VE</option>
+												  <option value="A -">A-VE</option>
+												  <option value="B +">B+VE</option>
+												  <option value="B -">B-VE</option>
+												  <option value="O +">O+VE</option>
+												  <option value="O -">O-VE</option>
+												  <option value="AB -">AB-VE</option>
+												 </select> 
+                                            </div>
+
+                                             <div style="padding-top: 20px"></div>
+											 <select name="gender" class="btn btn-primary" required >
+										      <option value="" disabled selected style="display: none;">GENDER</option>
+										      <option value="male">MALE</option>
+										      <option value="female">FEMALE</option>
+										      </select>
+                                             <div style="padding-top: 20px"></div>
+											<select name="organ" class="btn btn-primary" required >
+										      <option value="" disabled selected style="display: none;">ORGANS REQUIRED</option>
+										      <option value="heart">HEART</option>
+										      <option value="kidney">KIDNEY</option>
+										      <option value="liver">LIVER</option>
+										      <option value="pancreas">PANCREAS</option>
+										      </select>
+											
+										      <div style="padding-top: 20px"></div>
+											<span><input type="submit" value="REGISTER" class="btn btn-primary btn-lg"></span>
+									</form> 
+										
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- fh5co-content-section -->
+
+		
+	</body>
+</html>
+
+{% endblock%}
+ 

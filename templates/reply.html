@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style type="text/css">
+/* pushes the page to the full capacity of the viewing area */
+
+/* prepares the background image to full capacity of the viewing area */
+#bg {position:fixed; top:0; left:0; width:100%; height:100%;}
+/* places the content ontop of the background image */
+#content {position:relative; z-index:1;}
+.heading{
+	font-size: 70px;
+	text-align: center;
+	color: white;
+	font-style: serif;
+	padding-bottom: 100px;
+
+}
+.box{
+	
+	background-color: white;
+	opacity: .7;
+	height: relative;
+	padding-bottom: 50px;
+
+	
+}
+footer{
+	padding-top: 1000px;
+}
+
+
+
+</style>
+
+
+<div id="bg"><img src="https://www.freecreatives.com/wp-content/uploads/2016/04/Solid-Black-HD-Background-.jpg" width="100%" height="100%" alt=""></div>
+
+<div id="content" style="padding-top: 80px;"></div>
+
+{% if ans%}
+			{% for x in ans %}
+
+			<p style="font-size: 50px;color: white;">ANSWERS</p>
+
+
+	<div class="box col-md-8 offset-2">
+		<p style="padding-top: 20px;font-size: 20px;color: black;">{{count+1}}:{{x['question']}} </p>
+								<div class="ques">
+											{% if  x['answers'] == "empty" %}
+												<p>no answers yet</p>
+											
+											{% else  %}
+												<p>{{x['answers']}}</p>
+											{% endif %}
+											
+
+								</div>	
+	</div>
+	<hr>
+
+
+			{% endfor %}
+{%endif%}	
+
+{%if not ans%}
+
+	<div class="box col-md-8 offset-2">
+		<p style="padding-top: 20px;font-size: 40px;color: red; padding-left: 160px;">You dont have any question </p>
+								
+											
+			
+			<a class="btn btn-primary btn-sm offset-5" href="/ask">ask now</a>							
+											
+											
+
+									
+	</div>
+
+
+{%endif%}
+
+
+
+
+
+
+
+{% endblock%}

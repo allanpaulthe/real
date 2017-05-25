@@ -1,0 +1,95 @@
+{% extends "adminbase.html" %}
+
+{% block content %}
+
+<style type="text/css">
+/* pushes the page to the full capacity of the viewing area */
+
+/* prepares the background image to full capacity of the viewing area */
+#bg {position:fixed; top:0; left:0; width:100%; height:100%;}
+/* places the content ontop of the background image */
+#content {position:relative; z-index:1;}
+.heading{
+	font-size: 70px;
+	text-align: center;
+	color: white;
+	font-style: serif;
+	padding-bottom: 100px;
+
+}
+.box{
+	
+	background-color: white;
+	opacity: .7;
+	height: relative;
+
+	
+}
+footer{
+	padding-top: 450px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: red;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: red;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: red;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: red;
+}
+.table{
+	width: relative;
+	background-color: black;
+	opacity: .5;
+}
+thead{
+	color: white;
+	font-size: 20px;
+}
+tr{
+	color: #f2eb1a;
+}
+</style>
+
+
+<div id="bg"><img src="http://wallpapercave.com/wp/IP2akFC.jpg" width="100%" height="100%" alt=""></div>
+<div id="content"><p class="heading"></p></div>
+<div class="box col-md-8 offset-2">
+		<p style="color: black;font-size: 30px;text-align: center;">RESULT</p>
+		<hr >
+		<br>
+		{%if var%}
+			<table class="table">
+				<thead>
+					<td>userid</td>
+					
+					<td>name</td>
+					<td>username</td>
+				</thead>
+				<tbody>
+				{%for x in  var%}
+				<tr>
+					<td>{{x[2]}} </td>
+					
+					<td>{{x[4]}}</td>
+					<td>{{x[0]}}</td>
+					<td><a href="/removeuser2/{{x[2]}}" class="btn btn-primary btn-sm">remove</a></td>
+				</tr>
+				{%endfor%}
+				</tbody>
+			</table>
+		{%endif%}
+		{%if not var%}
+
+			<p style="font-size: 30px;color: black;">No results</p>
+		{%endif%}
+
+</div>
+
+
+
+
+{% endblock%}

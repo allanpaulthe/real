@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style type="text/css">
+    	.a{
+    		background-color: black;
+    		opacity: .7;
+    		padding-top: 50px;
+    		padding-bottom: 50px;
+    		
+
+    	}
+    	.b{
+    		background-color: #d6cbce;
+    		opacity: 0.9;
+    		height: 80px;
+    		padding-top: 0PX;
+    	}
+    	.c{
+    		text-align: center;
+    		color: blue;
+    		font-size: 60px;
+
+    	}
+    	.d{
+    		padding-top: 50px;
+    		padding-left: 30px;
+    		padding-right: 30px;
+    		text-align: center;
+    	}
+    	.f{
+    		font-size: 30px;
+    		
+    		color: white;
+    		padding-top: 70px;
+    		padding-left: 30px;
+    		padding-right: 30px; 
+    		text-align: center;
+    		
+    	}
+    	.btn{
+    		color: orange;
+    		opacity: .6;
+    	}
+    </style>
+  </head>
+  <body style="height: 500px;width: 350;">
+   
+    <div class="container a" >
+    	<nav class="navbar navbar-light bg-faded b">
+  			<h1 class="navbar-brand mb-0 c" style="color: blue;">Ayush.co</h1>
+		</nav>
+		<div class="d" >
+			<a  class="f" style="color: orange;">a match for your request no {{requestno}}  is avialable at {{hosname}} contact them {{contact}} </a>
+
+		</div>
+		<div style="padding-top: 80px;" class="col-md-2 offset-5" >
+			<a  href="http://127.0.0.1:5000/accept/{{requestno}}/{{hospital}}/{{donor}} "  style="align-self: center;text-orientation: center;font-size: 20px; "> click here to accept this donation</a>
+		</div>
+    	
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

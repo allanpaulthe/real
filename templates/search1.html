@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+		<div class="fh5co-hero">
+			
+			  <div class="fh5co-cover text-center" data-stellar-background-ratio="1.0" style="background-image: url(static/images/person.jpg);">
+			  
+				<div class="desc animate-box">
+						<div class="container" style="padding-top: 10px;">
+								<div class="row">
+									<div class="col-md-6 offset-md-3 col-xs-12">
+										<form method="POST">
+											<fieldset class="form-group">
+												<input type="text" placeholder="NAME" name="name" class="form-control">
+											</fieldset>
+											<fieldset class="form-group">
+												<input type="text" placeholder="DATE OF BIRTH" onfocus="(this.type='date')" class="form-control"  class="textbox-n">
+											</fieldset>
+											<span><a class="btn btn-primary btn-lg" href="javascript:void(0)" onclick="toggle_visibility('popupBoxHTML');">SEARCH</a></span>
+											
+										</form>
+											<div id="popupBoxHTML">
+										                <div class="popupBoxWrapper">
+										                    <div class="popupBoxContent">
+										                        <h3 style="color: white;font-size: 20px;text-align: center;">RESULTS</h3>
+										                        
+
+					                                            <table class="table table-inverse" >
+																  <tr>
+																    <th>Company</th>
+																    <th>Contact</th>
+																    <th>Country</th>
+																  </tr>
+																  <tr>
+																    <td>Alfreds Futterkiste</td>
+																    <td>Maria Anders</td>
+																    <td>Germany</td>
+																    <td><div class="btn btn-primary" >remove</div></td>
+																  </tr>
+																  <tr>
+																    <td>Centro comercial Moctezuma</td>
+																    <td>Francisco Chang</td>
+																    <td>Mexico</td>
+																  </tr>
+																  <tr>
+																    <td>Ernst Handel</td>
+																    <td>Roland Mendel</td>
+																    <td>Austria</td>
+																  </tr>
+																  <tr>
+																    <td>Island Trading</td>
+																    <td>Helen Bennett</td>
+																    <td>UK</td>
+																  </tr>
+																  <tr>
+																    <td>Laughing Bacchus Winecellars</td>
+																    <td>Yoshi Tannamuri</td>
+																    <td>Canada</td>
+																  </tr>
+																  <tr>
+																    <td>Magazzini Alimentari Riuniti</td>
+																    <td>Giovanni Rovelli</td>
+																    <td>Italy</td>
+																  </tr>
+																</table>
+																<table>
+													                       <tr><td colspan=6> <input   class="btn btn-primary btn-lg " type="submit" value="close" name="submit" onclick="toggle_visibility('popupBoxHTML');">
+													                       
+										                        </table>
+									             
+								           </div>
+								     </div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- fh5co-content-section -->
+
+		
+	</body>
+			<script type="text/javascript">
+		function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+
+            }
+    </script>
+
+
+</html>
+
+{% endblock%}
+ 

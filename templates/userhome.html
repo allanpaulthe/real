@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+		<div class="fh5co-hero">
+			<div class="fh5co-overlay" style="opacity: .5;"></div>
+			<div class="fh5co-cover text-center"  data-stellar-background-ratio="1.0" style="background-image: url(http://www.v1healthcare.in/images/slider2.jpg);">
+				<div class="desc animate-box">
+					<h2><strong>DAILY HEALTH &amp;MEDICAL News</strong></h2>
+					<span>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">AYUSH.co</a></span>
+					 {% if session_user_name is not defined %}
+					     <span><a class="btn btn-primary btn-lg" href="/userlogin">LOGIN NOW</a></span>                     
+					 {% endif %}
+					 {% if session_user_name %}
+					     <span><a class="btn btn-primary btn-lg" href="/go">Explore</a></span>                     
+					 {% endif %}
+					
+				</div>
+			</div>
+
+		</div>
+<div class="xx  " style="background: linear-gradient(
+      rgba(22, 22, 22, 0.45), 
+      rgba(22, 22, 22, 0.45)
+    ),url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSvt1VKzHK4Jg-OMtF71SeR8dyaArvj80yR3V0swR0irg7RNYMD_g);
+">		
+		
+<div id="fh5co-services-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3 style="color: white;">Todays tips</h3>
+						
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				{%for x in tips%}
+					<div class="col-md-4 col-sm-4">
+						<div class="services animate-box">
+							<span><i class="icon-heart"></i></span>
+							
+							<p style="color: white;">{{x['content']}}</p>
+							<a href="/readtip/{{x['no']}}" style="color: blue;"> read now</a>
+						</div>
+					</div>
+					{%endfor%}
+					
+					
+				
+			</div>
+		</div>
+
+
+
+
+
+		<div id="fh5co-blog-section" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3 style="color: white;">Read. Learn. Share</h3>
+						
+					</div>
+				</div>
+			</div>
+			<div class="container">
+			
+				<div class="row row-bottom-padded-md">
+				{% for x in var%}
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+
+							<a href=""><img class="img-responsive" style="height: 330px;width: 300px;" src="static/img/{{x['pic']}}" alt=""></a>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3><a href="http://www.myhealthtips.in/2013/11/top-10-foods-to-cleanse-colon.html">{{x['heading']}}</a></h3>
+									<span class="posted_by">{{x['datee']}}</span>
+									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
+									
+									<p><a href="http://127.0.0.1:5000/viewjournal/{{x['jno']}}">Learn More...</a></p>
+								</div>
+							</div> 
+						</div>
+
+					</div>
+					{%endfor%}
+					
+				
+					
+					
+					
+					
+			</div>
+
+				<div class="row">
+					<div class="col-md-4 col-md-offset-4 text-center animate-box">
+						<a href="/readmore" class="btn btn-primary btn-lg">READ MORE</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- fh5co-blog-section -->
+
+		
+		
+	
+
+	</div>
+	<!-- END fh5co-page -->
+
+	</div>
+	<!-- END fh5co-wrapper -->
+
+	<!-- jQuery -->
+	
+</body>
+{% endblock%}
+

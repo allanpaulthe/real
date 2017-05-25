@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style type="text/css">
+	.cc{
+		margin-right: 80px;
+	}
+	.bb
+	{
+		margin-left: 190px;
+	}
+	.box{
+		width: relative;
+		height: relative;
+		border: 5px solid hsla(168, 61%, 5%, 0.88);
+
+	}
+</style>
+<body>
+	<section class="block-parallax-3">
+			<div class="parallax-bg"></div>
+				<div class="md-box">
+				<p style="font-size: 40px;color: white;">search your favorite doctors</p>
+				<div class="box container" style="background-color: transparent;">
+					<div id="fh5co-features">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4">
+
+									<div class="feature-left">
+										<span class="icon">
+											<i class="icon-profile-male"></i>
+										</span>
+										<div class="feature-copy">
+											<span style="color: white;font-size: 30px">SPECIALISTS</span>
+											<p>Find specialist for your needs.</p>
+											<form id="specialist" method="post" action="/searchbyspeciality">
+												<select name='specialist' class="btn btn-primary btn-sm" required>
+													<option disabled selected style="display: none;">SPECIALITY</option>
+												      <option value='neuro'>NEUROLOGIST</option>
+												      <option value='ortho'>ORTHOLOGIST</option>
+												      <option value='pedia'>PEDIATRIST</option> 
+												      <option value='gyno'>GYNOCOLOGIST</option>
+												      <option value='onco'>ONCOLOGIST</option>
+						        
+												</select>
+												<br>
+												<br>
+												<input   class="btn btn-primary btn-lg" type="submit" value="search" name="submit">
+											</form>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+									<div class="feature-left">
+										<span class="icon">
+											<i class="glyphicon glyphicon-calendar"></i>
+										</span>
+										<div class="feature-copy">
+											<span style="color: white;font-size: 30px">HOSPITAL</span>
+											<p>find the doctors in your nearby hospitals.</p>
+
+											<form id="hospitals" method="post" action="/searchbyhospital">
+												<select name='hospitals' class="btn btn-primary btn-sm">
+													<option disabled selected style="display: none;">hospitals</option>
+													{%for x in hos%}
+												      <option value='{{x[0]}}'>{{x[0]}}</option>
+												      
+												    {%endfor%}
+						        
+												</select>
+												<br>
+												<br>
+												<input   class="btn btn-primary btn-lg" type="submit" value="search" name="submit">
+											</form>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-md-4">
+									<div class="feature-left">
+										<span class="icon">
+											<i class="glyphicon glyphicon-tag"></i>
+										</span>
+										<div class="feature-copy">
+											<span style="color: white;font-size: 30px">LOCALITY</span>
+											<p>search  according to the location.</p>
+											<form name="form1" id="location" method="post" action="/searchbylocality">
+												<select name='location' class="btn btn-primary btn-sm">
+													<option disabled selected style="display: none;">locations</option>
+													{%for x in loc%}
+												      <option value='{{x[0]}}'>{{x[0]}}</option>
+												      
+												    {%endfor%}
+						        
+												</select>
+												<br>
+												<br>
+												<input   class="btn btn-primary btn-lg" type="submit" value="search" name="submit">
+											</form>
+									
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+	</section>
+	<script type="text/javascript">
+		function toggle_visibility(id) {
+				var location=document.forms["form1"]["location"].value;
+				var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+
+            }
+    </script>
+
+</body>
+
+
+
+{% endblock%}

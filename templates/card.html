@@ -1,0 +1,52 @@
+{% extends "hospitalbase.html" %}
+
+{% block content %}
+<style>
+	.cras
+	{
+
+		margin-right:250px;
+		color: blue;
+	}
+	.tfytf
+	{
+			margin-left:50px;
+			color: green;
+	}
+</style>
+<body>
+
+			<section class="block-parallax-1">
+			    <div class="parallax-bg"></div>
+			    <div class="md-box">
+			    <div class="container" style="padding-top: 0px;padding-bottom: 200px;padding-left: 300px">
+			    <div class="card" style="width: 50rem;">
+  <img class="card-img-top" src="static/images/heart.jpg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">AVAILABLE ORGANS</h4>
+    
+   
+  <ul>
+   
+    <li class="list-group-item"><span class="cras">PANCREAS</span><span class="tfytf">{{var['pancreas']}} </span></li>
+    <li class="list-group-item"><span class="cras">HEART</span><span class="tfytf">{{var['heart']}} </span></li>
+    <li class="list-group-item"><span class="cras">LUNGS</span><span class="tfytf">{{var['lungs']}} </span></li>
+    <li class="list-group-item"><span class="cras">LIVER</span><span class="tfytf">{{var['liver']}} </span></li>
+    <li class="list-group-item"><span class="cras">KIDNEY</span><span class="tfytf">{{var['kidney']}} </span></li>
+  </ul>
+  
+  
+  <div class="card-block">
+    <a href="/user" class="card-link">BACK</a>
+   
+  </div>
+</div>
+			    </div>
+			</section>
+			<br>
+			<br>
+			</div>
+</body>
+
+
+{% endblock%}

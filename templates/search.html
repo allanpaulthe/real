@@ -1,0 +1,70 @@
+{% extends "doctorbase.html" %}
+
+{% block content %}
+
+
+
+
+
+
+<style type="text/css">
+/* pushes the page to the full capacity of the viewing area */
+
+/* prepares the background image to full capacity of the viewing area */
+#bg {position:fixed; top:0; left:0; width:100%; height:100%;}
+/* places the content ontop of the background image */
+#content {position:relative; z-index:1;}
+.heading{
+	font-size: 70px;
+	text-align: center;
+	color: white;
+	font-style: serif;
+	padding-bottom: 100px;
+
+}
+.box{
+	
+	background-color: white;
+	opacity: .7;
+	height: relative;
+
+	
+}
+footer{
+	padding-top: 450px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: red;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: red;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: red;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: red;
+}
+
+</style>
+
+
+<div id="bg"><img src="http://wallpapercave.com/wp/IP2akFC.jpg" width="100%" height="100%" alt=""></div>
+<div id="content"><p class="heading">welcome Doctor.</p></div>
+<div class="box col-md-8 offset-2">
+		<p style="color: black;font-size: 30px;text-align: center;">See your bookings</p>
+		<hr >
+		<br>
+		<p style="padding-left: 120px;font-size: 20px;color: black;"> 
+			 <form style="padding-left: 300px;" action="/doctorbydate" method="POST">
+				<input style="opacity: 1;" type="date" name="date" placeholder="select a date">
+				<input type="submit" value="search"  class="btn btn-primary btn-sm">
+			</form>
+		</p>
+		
+
+</div>
+
+ 
+
+{% endblock%}

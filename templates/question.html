@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<body>
+	<div>
+				 <div class="fh5co-cover " data-stellar-background-ratio="1.0" style="background-image: url(static/images/medicalback.jpg);">
+				 <br>
+				 <br>
+				 <br>
+				 <div class="container">
+
+				 		<form method="POST" action="/newuser">
+				    				<br>
+				    				<br>
+				    				<br>
+				    				<br>
+				    				<br>
+											
+											<fieldset class="form-group">
+												<textarea type="text" value={{var['question']}} name="username" class="form-control" cols="30" rows="4" required ></textarea>
+											</fieldset>
+											<fieldset class="form-group">
+												<textarea type="text" placeholder="answer here" 												name="username" class="form-control" cols="30" rows="7" required ></textarea>
+											</fieldset>
+<br>
+<br>
+										<div class="col-md-2 col-md-offset-5"
+											
+											<span><input type="submit" value="post" class="btn btn-primary btn lg" href="doubt"> </span>
+										</div>
+
+											
+								</form>
+						</div>
+					
+
+
+				</div>
+	</div>
+</body>
+{% endblock%}

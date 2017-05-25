@@ -1,0 +1,164 @@
+{% extends "hospitalbase.html" %}
+
+{% block content %}
+<body>
+		<div class="fh5co-hero">
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-cover text-center" data-stellar-background-ratio="1.0" style="background-image: url(static/images/medicalback.jpg);">
+				<div class="desc animate-box">
+					<h2><strong>WELCOME <br><h2><strong>{{ session_user_name }}</strong></h2></strong></h2>
+					<span>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">AYUSH.COM</a></span>
+					<div style="padding-top: 40px;"></div>
+					{%if aa%}
+					<strong><a style="font-size: 50px;color: orange;" class="fh5co-site-name">notification is send to all matching requests</a></strong>
+					{%endif%}
+				</div>
+			</div>
+
+		</div>
+		
+		<div id="fh5co-blog-section" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>REGISTER. DONATE. RECEIVE</h3>
+						<p>Register for needed organs,Donate available organs and Receive organs...welcome</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row row-bottom-padded-md">
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+							<a href="#"><img class="img-responsive" src="static/images/registerpatient.jpg" height="300" width="300"  alt="image"></a>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3><a href=""#>PATIENT REGISTRATION</a></h3>
+									<p>Specify the requirements of the needed organs and patient details</p>
+									<p><a href="/login">REGISTER</a></p>
+								</div>
+							</div> 
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+							<a href="#"><img class="img-responsive" src="static/images/donarsearch.png" height="300" width="300"  alt="image"></a>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3><a href="/searchuser">SEARCH DONORS</a></h3>									
+									<p>Search among the registerd organ donators in our site</p>
+									<p><a href="/searchuser">SEARCH</a></p>
+								</div>
+							</div> 
+						</div>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+							<a href="#"><img class="img-responsive" src="static/images/waitlistorgan.jpg" height="300px" width="300px"  alt=""></a>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3><a href="#">WAITLIST FOR ORGANS</a></h3>									
+									<p>View all the registerd requests for organs</p>
+									<p><a href="/index">VIEW</a></p>
+								</div>
+							</div> 
+						</div>
+					</div>
+					<div class="clearfix visible-md-block"></div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+							<a href="#"><img class="img-responsive" src="static/images/renewrequest.png" height="300px" width="300px"   alt=""></a>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3><a href=""#>REMOVE OR RENEW REQUESTS</a></h3>
+									<p>Remove the accomplished requests or renew them</p>
+									<p><a href="/add">REMOVE/RENEW</a></p>
+								</div>
+							</div> 
+						</div>
+					</div>
+					
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+							<a href="#"><img class="img-responsive" src="static/images/registertransaction.jpg" height="300px" width="300px"  alt=""></a>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3><a href="#">REGISTER TRANSACTIONS</a></h3>
+									<p>Register the succsesfullt completed transactions to the website</p>
+									<br>
+									<p><a href="/reg">REGISTER</a></p>
+								</div>
+							</div> 
+						</div>
+					</div>
+					<div class="clearfix visible-md-block"></div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+							<a href="#"><img class="img-responsive" src="static/images/request.jpeg" height="300px" width="300px"   alt=""></a>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3><a href=""#>PATIENT REQUESTS</a></h3>
+									<p>View the requests placed by the patients of your hospital</p>
+									<p><a href="/donor">VIEW</a></p>
+								</div>
+							</div> 
+						</div>
+					</div>
+					<div class="clearfix visible-md-block"></div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+							<a href="#"><img class="img-responsive" src="static/images/organ.jpeg" height="300px" width="300px"   alt=""></a>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3><a href=""#>AVAILABLE ORGANS</a></h3>
+									<p>View the number of organs available organs in your hospital</p>
+									<p><a href="/card">VIEW</a></p>
+								</div>
+							</div> 
+						</div>
+					</div>
+					
+
+				
+
+			</div>
+		</div>
+		<!-- fh5co-blog-section -->
+
+		
+		
+	
+
+	</div>
+	<!-- END fh5co-page -->
+
+	</div>
+	<!-- END fh5co-wrapper -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/sticky.js"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Superfish -->
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+	
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+
+
+
+
+
+</body>
+{% endblock%}
+

@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style type="text/css">
+	.xx{
+		padding-left: 200px;
+		height: relative;
+		width: relative;
+		background: 
+    /* top, transparent red */
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    );
+
+	}
+	</style>
+
+<body>
+			<section class="block-parallax-1">
+			    <div class="parallax-bg"></div>
+			     <div class="md-box " style="padding-top: 50px;">
+			    <p style="text-align: center;font-size: 50px;color: white;">Edit your details</p>
+			    <div class="xx container " style="background: linear-gradient(
+      rgba(22, 22, 22, 0.45), 
+      rgba(22, 22, 22, 0.45)
+    ),url(https://images.freecreatives.com/wp-content/uploads/2015/04/1073233-black-wood-panels.jpg);">
+    <br>
+    <br>
+			    <form id="Form" method="post" action="/edit" class="aa" style="align-self: center;"  enctype="multipart/form-data">
+			   
+					<table style="margin: 3px; align-self: center;">
+					{% for x in rows%}
+					
+						
+					
+
+						<tr><td>First Name:</td><td><input type="text" size="12" maxlength="32" value={{x["fname"]}}  name="first_name" required lettersonly></td></tr>
+						<tr><td>Last Name:</td><td><input type="text" size="12" value={{x["sname"]}}  maxlength="32" name="last_name" required lettersonly></td></tr>
+						
+						<tr><td>Primary Phone:</td><td><input  pattern="[789][0-9]{9}" required title="enter a valid phone no" type="text" size="12" value={{x["pphno"]}}  name="primary_phone" class="phone" required=""></td></tr>
+						<tr><td>Emergency Phone1:</td><td><input  pattern="[789][0-9]{9}" required title="enter a valid phone no" type="text" value={{x["ephno1"]}} size="12"  name="ephone2" class="phone" required=""></td></tr>
+						<tr><td>Emergency Phone2:</td><td><input  pattern="[789][0-9]{9}" required title="enter a valid phone no" type="text" value={{x["ephno2"]}} size="12"  name="ephone1" class="phone" required=""></td></tr>
+						<tr><td>Email:</td><td><input type="text" size="36" value={{x["email"]}} maxlength="36" name="email" required email></td></tr>
+						<tr><td>date of birth:</td><td><input type="date" value={{x["dob"]}} name="dob" ></td></tr>
+						<tr><td>blood group:</td>
+						 <td>
+							<select name='blood' class="btn btn-primary btn-sm" value={{x["blood"]}} >
+						      <option value='A +'>A positive</option>
+						      <option value='A -'>A negative</option>
+						      <option value='O +'>O positive</option> 
+						      <option value='O -'>O negative</option>
+						      <option value='B +'>B positive</option>
+						      <option value='B -'>B negative</option>
+						      <option value='AB +'>AB positive</option> 
+						      <option value='AB -'>AB negative</option>        
+						    </select>
+						 </td>
+						</tr>
+						<tr>
+								 <td colspan="1">SEX:</td>
+								 <td> <input type="radio" name="gender" value="male" required=""> Male</td>
+								 <td> <input type="radio" name="gender" value="female"> Female</td>
+						</tr>
+						<tr> <td colspan=8> <input type="radio" name="gender" value="other"> Other</td></tr>						
+						<tr><td colspan=3><b>Your Adress</b></td></tr>
+					  	<tr><td>house no/name:</td><td><input type="text" size="36" name="house" value={{x["house"]}} required></td>></tr>
+						<tr><td>city:</td><td><input type="text" size="36" value={{x["city"]}} name="city" required></td></tr>
+						<tr><td>pin code:</td><td><input type="text" size="6" maxlength="16" value={{x["pincode"]}} name="pincode" required class="phone"></td></tr>
+						
+						<tr><td colspan=3>ORGANS YOU WISH TO DONATE</td></tr>
+						<tr>
+							
+								 
+								 <td> <input type="radio" name="liver" value="yes"> liver</td>
+								 
+						</tr>
+						<tr>
+								 
+								 <td> <input type="radio" name="heart" value="yes"> heart</td>
+								 <td> <input type="radio" name="kidney" value="yes"> kidney</td>
+								 							
+						</tr>
+						<tr>
+								 
+								 <td> <input type="radio" name="lungs" value="yes"> Lungs</td>
+								 <td> <input type="radio" name="pancreas" value="yes"> Pancreas</td>
+								 
+						
+						</tr>
+				{% endfor %}		
+					</table>
+					<br>
+					<br>
+
+					<table class="col-mg-2 offset-4">
+  					<tr>
+  					<td>
+						<input style="text-align: center;" class="btn btn-primary btn-md" type="submit" value="Register" name="submit">
+					</td>
+					</tr>
+
+					</table>
+				<br>
+				<br>
+				</form>
+				</div>
+
+			         
+			    </div>
+			</section>
+</body>
+
+
+{% endblock%}

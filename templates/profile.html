@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+<section class="block-parallax-1">
+			    <div class="parallax-bg"></div>
+			    <div class="md-box">
+			<div class="container" style="padding-left: 300px">
+			    <form id="Form" method="post" action="/success" class="required">
+					<table>
+						<tr><td>DONOR DETAILS</td></tr>
+						<tr><td>First Name:</td><td>Anandhu</td></tr>
+						<tr><td>Last Name:</td><td>Devaraj</td></tr>
+						<tr><td>Primary Phone:</td><td>04902445225</td></tr>
+						<tr><td>Emergency Phone1:</td><td>123455</td></tr>
+						<tr><td>Emergency Phone2:</td><td>57789</td></tr>
+						<tr><td>Email:</td><td>anadhu@gmail.com</td></tr>
+						<tr><td>date of birth:</td><td>27/12/1995</td></tr>
+						<tr><td>blood group:</td><td>O+VE</td></tr>
+						<tr>
+								 <td colspan="1">SEX:</td>
+								 <td>Male</td>
+								
+						</tr>
+												
+						<tr><td colspan=3><b>ADDRESS</b></td></tr>
+					  	<tr><td>HOUSE NAME:</td><td>Harigovindam</td></tr>
+						<tr><td>city:</td><td>Meppayoor</td></tr>
+						<tr><td>pin code:</td><td>670673</td></tr>
+						<tr><td>PHOTO:</td><td></td></tr>
+						<tr><td colspan=3>ORGANS YOU WISH TO DONATE</td></tr>
+						<tr>
+							
+								 <td> <input type="radio" name="all" value="male"> All organs</td>
+								 <td> <input type="radio" name="liver" value="female"> liver</td>
+						</tr>
+						<tr>
+								 
+								 <td> <input type="radio" name="heart" value="male"> heart</td>
+								 <td> <input type="radio" name="kidney" value="female"> kidney</td>
+						</tr>
+						<tr>
+								 
+								 <td> <input type="radio" name="lungs" value="male"> Lungs</td>
+								 <td> <input type="radio" name="pancreas" value="female"> Pancreas</td>
+						</tr>
+						<br>
+						<br>
+						<tr>
+						<br>
+						<br>
+						         <td><span><a class="btn btn-primary btn-lg"  href="/searchuser">BACK</a></span></td><td></td>
+						         <td><span><a class="btn btn-primary btn-lg"  href="/match">UPDATE</a></span></td><td></td>
+						         
+
+						</tr>
+					</table>
+					
+					
+  				<br>
+  				<br>
+				
+			</div>
+			</section>
+		
+
+				
+				</form>
+
+			  
+			<br>
+			<br>
+</body>
+
+
+{% endblock%}
