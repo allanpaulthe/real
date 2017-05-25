@@ -15,4 +15,4 @@ mock
 # ----------------------
 gevent
 gunicorn
-sqlite3
+
